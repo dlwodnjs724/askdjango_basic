@@ -26,5 +26,8 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)        # auto_now_add=True: 최초로 생성될 때 시간 자동 저장
     updated_at = models.DateTimeField(auto_now=True)            # auto_now=True: 갱신될 때마다 시간 자동 저장
 
+    class Meta:
+        ordering = ['-id']
+
     def __str__(self):
         return self.title
