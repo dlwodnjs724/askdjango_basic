@@ -23,7 +23,7 @@ class Post(models.Model):
                               validators=[lnglat_validator],
                               help_text='경도/위도 포맷으로 입력')
     status = models.CharField(max_length=1, choices=STATUS_CHOICES)
-    tag_set = models.ManyToManyField('Tag')                     # 문자열로 모델명을 써줌
+    tag_set = models.ManyToManyField('Tag', blank=True)                     # 문자열로 모델명을 써줌
     created_at = models.DateTimeField(auto_now_add=True)        # auto_now_add=True: 최초로 생성될 때 시간 자동 저장
     updated_at = models.DateTimeField(auto_now=True)            # auto_now=True: 갱신될 때마다 시간 자동 저장
 
