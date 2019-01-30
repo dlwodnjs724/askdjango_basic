@@ -6,6 +6,7 @@ app_name = "askdjango"
 
 urlpatterns = [
     path('new/', views.post_new),
+    path('<int:id>/edit/', views.post_edit),
 
     re_path(r'sum/(?P<numbers>[\d/]+)/$', views.mysum),
     # how? path('sum/<str:numbers>/', views.mysum)
