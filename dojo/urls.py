@@ -5,6 +5,8 @@ from . import views_cbv
 app_name = "askdjango"
 
 urlpatterns = [
+    path('new/', views.post_new),
+
     re_path(r'sum/(?P<numbers>[\d/]+)/$', views.mysum),
     # how? path('sum/<str:numbers>/', views.mysum)
     path('hello/<str:name>/<int:age>/', views.hello),
