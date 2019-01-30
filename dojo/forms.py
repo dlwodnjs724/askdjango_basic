@@ -6,6 +6,9 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ['title', 'content']
+        widgets = {
+            'user_agent': forms.HiddenInput,
+        }
 
     '''
     def save(self, commit=True):
