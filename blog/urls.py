@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 from . import views_cbv
 
-app_name = "askdjango"
+app_name = "blog"
 
 urlpatterns = [
     path('', views.post_list, name='post_list'),

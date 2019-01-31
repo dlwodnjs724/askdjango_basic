@@ -2,7 +2,7 @@ from django.urls import path, re_path
 from . import views
 from . import views_cbv
 
-app_name = "askdjango"
+app_name = "dojo"
 
 urlpatterns = [
     path('new/', views.post_new),
