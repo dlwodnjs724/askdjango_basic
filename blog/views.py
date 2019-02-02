@@ -1,5 +1,7 @@
 from django.contrib import messages
 from django.shortcuts import render, get_object_or_404, redirect
+from django.views.generic import ListView
+
 from .models import Post
 from .forms import PostForm
 
@@ -15,6 +17,9 @@ def post_list(request):
         'post_list': qs,
         'q': q,
     })
+
+
+post_list = ListView.as_view(model=Post, paginate_by=10)
 
 
 def post_detail(request, id):

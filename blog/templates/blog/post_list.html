@@ -1,5 +1,10 @@
 {% extends 'blog/layout.html' %}
 
+{% load bootstrap3 staticfiles %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
 {% block content %}
     <div class="container">
         <div class="jumbotron">
@@ -58,6 +63,10 @@
                         {% endfor %}
                     </tbody>
                 </table>
+
+                <div class="text-center">
+                    {% bootstrap_pagination page_obj %}
+                </div>
             </div>
         </div>
     </div>
