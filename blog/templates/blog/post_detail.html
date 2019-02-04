@@ -12,7 +12,7 @@
 
                 {# <img src="/media/{{ post.photo }}" alt="" style="max-width: 100%"> #}
                 {% if post.photo %}
-                    <img src="{{ post.photo_thumbnail.url }}" alt="">
+                    <img src="{{ post.photo.url }}" alt="">
                 {% endif %}
 
                 {{ post.content|linebreaks }}
