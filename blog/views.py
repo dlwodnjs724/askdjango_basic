@@ -19,9 +19,6 @@ def post_list(request):
     })
 
 
-post_list = ListView.as_view(model=Post, paginate_by=10)
-
-
 def post_detail(request, id):
     # try:
     #     post = Post.objects.get(id=id)
