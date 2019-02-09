@@ -25,8 +25,8 @@ def post_new(request):
     })
 
 
-def post_edit(request, id):
-    post = get_object_or_404(Post, id=id)
+def post_edit(request, pk):
+    post = get_object_or_404(Post, pk=pk)
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
